@@ -23,6 +23,9 @@ phases:
       - docker push $REPOSITORY_URI:$IMAGE_TAG
       - echo Writing image definitions file...
       - printf '[{"name":"hello-world","imageUri":"%s"}]' $REPOSITORY_URI:$IMAGE_TAG > imagedefinitions.json
+  install:
+      runtime-versions:
+        mysql: 8
 artifacts:
     files: imagedefinitions.json
 
