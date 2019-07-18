@@ -17,7 +17,7 @@ phases:
       - docker tag $REPOSITORY_URI:latest $REPOSITORY_URI:$IMAGE_TAG
   post_build:
     commands:
-      - mysql --version
+      - docker --version
       - echo Build completed on `date`
       - echo Pushing the Docker images...
       - docker push $REPOSITORY_URI:latest
@@ -26,7 +26,7 @@ phases:
       - printf '[{"name":"hello-world","imageUri":"%s"}]' $REPOSITORY_URI:$IMAGE_TAG > imagedefinitions.json
   install:
       runtime-versions:
-        mysql: 8
+        docker: latest
 artifacts:
     files: imagedefinitions.json
 
