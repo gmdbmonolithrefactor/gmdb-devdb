@@ -26,7 +26,7 @@ phases:
       - printf '[{"name":"hello-world","imageUri":"%s"}]' $REPOSITORY_URI:$IMAGE_TAG > imagedefinitions.json
   install:
       runtime-versions:
-        docker: latest
+        docker: 18
 artifacts:
     files: imagedefinitions.json
 
