@@ -1,6 +1,6 @@
 # gmdb-devdb
 
-## This repository will create a database sutible for the gmdb-monolith project and / or associated microservices, and will contain test data.  
+## This repository will create a database sutible for the gmdb-monolith project and associated microservices.
 
 ### Dataload is done when creating the docker image.  Setup file is located in this repository in the file setup.sql.
 
